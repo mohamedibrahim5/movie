@@ -6,11 +6,22 @@
 //
 
 import UIKit
-class ViewController: UIViewController, addingtext {
+class ViewController: UIViewController, addingtext ,addingimage {
+    var arrimage: [UIImage] = [
+        UIImage(named: "test.jpeg")!
+    ]
+    @IBOutlet weak var imagetest: UIImageView!
+    //Use image name from bundle to create NSData
+
     @IBOutlet weak var tableview: UITableView!
     func addtext(name: String) {
      //   firsttext.text = name
         Movie.moviestitle.append(name)
+        tableview.reloadData()
+    }
+    func addimage(image: UIImage) {
+    //    imagetest.image = image
+        arrimage.append(image)
         tableview.reloadData()
     }
     
@@ -20,14 +31,13 @@ class ViewController: UIViewController, addingtext {
         as! firstViewController
         navigationController?.pushViewController(vc, animated: true)
         vc.x = self
+        vc.y = self
     }
     @IBOutlet weak var firsttext: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        var mov1 = Movie(title: "iron man")
-        var mov2 = Movie(title: "bat man")
+        var mov1 = Movie(title: "iron man",image: "image")
     }
-
 
 }
 
@@ -35,11 +45,15 @@ class ViewController: UIViewController, addingtext {
 class Movie
 {
     var title : String?
+    var image : String?
     static var moviestitle : [String] = []
-    init(title : String)
+    static var moviesimage : [String] = []
+    init(title : String,image :String)
     {
         self.title = title
+        self.image = image
         Movie.moviestitle.append(title)
+        Movie.moviesimage.append(image)
         
     }
 }
@@ -53,6 +67,8 @@ extension ViewController : UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         cell.textout.text = Movie.moviestitle[indexPath.row]
+        cell.imageview.image = arrimage[indexPath.row]
+        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -66,3 +82,7 @@ extension ViewController : UITableViewDelegate
 {
     
 }
+
+
+
+

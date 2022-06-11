@@ -7,6 +7,13 @@
 
 import UIKit
 class ViewController: UIViewController, addingtext ,addingimage {
+    
+    @IBOutlet weak var testinhimageview: UIImageView!
+    
+    
+    // image after encoding to save it in db ********************************
+    var encodingarr : [String] = []
+   
     var arrimage: [UIImage] = [
         UIImage(named: "test.jpeg")!
     ]
@@ -16,12 +23,18 @@ class ViewController: UIViewController, addingtext ,addingimage {
     @IBOutlet weak var tableview: UITableView!
     func addtext(name: String) {
      //   firsttext.text = name
+        // title after adding all save it in db ******************************
         Movie.moviestitle.append(name)
         tableview.reloadData()
     }
-    func addimage(image: UIImage) {
+    func addimage(image: UIImage, encode: String) {
     //    imagetest.image = image
         arrimage.append(image)
+        encodingarr.append(encode)
+        let imagedata = NSData (base64Encoded: encodingarr[0])
+        let imageed = UIImage(data: imagedata! as Data)
+        // to test encode and decode data
+      //  testinhimageview.image = imageed
         tableview.reloadData()
     }
     
@@ -37,6 +50,7 @@ class ViewController: UIViewController, addingtext ,addingimage {
     override func viewDidLoad() {
         super.viewDidLoad()
         var mov1 = Movie(title: "iron man",image: "image")
+       
     }
 
 }

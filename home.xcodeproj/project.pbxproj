@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A1155C902854B9F700AD5D24 /* DBManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1155C8F2854B9F700AD5D24 /* DBManger.swift */; };
 		A1155C922854BC5800AD5D24 /* DBMangerr.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1155C912854BC5800AD5D24 /* DBMangerr.swift */; };
+		A1155C962854E53300AD5D24 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1155C952854E53300AD5D24 /* testViewController.swift */; };
 		A17F17DB2854038F0002F585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F17DA2854038F0002F585 /* AppDelegate.swift */; };
 		A17F17DD2854038F0002F585 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F17DC2854038F0002F585 /* SceneDelegate.swift */; };
 		A17F17DF2854038F0002F585 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17F17DE2854038F0002F585 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		A1155C8F2854B9F700AD5D24 /* DBManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManger.swift; sourceTree = "<group>"; };
 		A1155C912854BC5800AD5D24 /* DBMangerr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBMangerr.swift; sourceTree = "<group>"; };
+		A1155C952854E53300AD5D24 /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		A17F17D72854038F0002F585 /* home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = home.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17F17DA2854038F0002F585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A17F17DC2854038F0002F585 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				A17F17E8285403900002F585 /* Info.plist */,
 				A1155C8F2854B9F700AD5D24 /* DBManger.swift */,
 				A1155C912854BC5800AD5D24 /* DBMangerr.swift */,
+				A1155C952854E53300AD5D24 /* testViewController.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				A17F180D285408C40002F585 /* TableViewCell.swift in Sources */,
 				A17F17DF2854038F0002F585 /* ViewController.swift in Sources */,
 				A17F17DB2854038F0002F585 /* AppDelegate.swift in Sources */,
+				A1155C962854E53300AD5D24 /* testViewController.swift in Sources */,
 				A17F17DD2854038F0002F585 /* SceneDelegate.swift in Sources */,
 				A1155C922854BC5800AD5D24 /* DBMangerr.swift in Sources */,
 				A1155C902854B9F700AD5D24 /* DBManger.swift in Sources */,

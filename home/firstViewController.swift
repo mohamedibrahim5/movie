@@ -12,9 +12,10 @@ protocol addingtext
 }
 protocol addingimage
 {
-    func addimage (image : UIImage)
+    func addimage (image : UIImage,encode :String)
 }
 class firstViewController: UIViewController {
+    
     @IBOutlet weak var importedImg: UIImageView!
     var x : addingtext?
     var y : addingimage?
@@ -23,12 +24,17 @@ class firstViewController: UIViewController {
       //  dismiss(animated: true , completion: nil)
         navigationController?.popViewController(animated: true)
         x?.addtext(name: secondtext.text!)
-        y?.addimage(image: importedImg.image!)
+       
+        let imastring = importedImg.image?.jpegData(compressionQuality: 1)?.base64EncodedString()
+        print(imastring!)
+        y?.addimage(image: importedImg.image!,encode: imastring!)
     }
+    
     @IBOutlet weak var secondtext: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -43,6 +49,8 @@ class firstViewController: UIViewController {
     }
     */
 
+    
+    
     @IBAction func importImageButtonAction(_ sender: UIButton) {
         openPhotoLibrary()
     }
